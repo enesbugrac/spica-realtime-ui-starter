@@ -9,6 +9,7 @@ const dummyTextandEmojis = [
 ];
 function App() {
   const handleClick = (_id: string, operation: string) => {
+    //Changing like and dislike values but not rendering
     dummyTextandEmojis.map((item) => {
       if (item._id === _id) {
         if (operation === "like") {
