@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./App.module.css";
+import "./App.css";
 const dummyTextandEmojis = [
   { text: "Life", _id: "1", like: 5, dislike: 10 },
   { text: "Test", _id: "2", like: 5, dislike: 10 },
@@ -24,23 +24,23 @@ function App() {
     console.log(dummyTextandEmojis);
   };
   return (
-    <div className={styles["App"]}>
-      <h1>SPICA REALTIME UI</h1>
-      <ul className={styles["itemContainer"]}>
+    <div className="container gp-2 page">
+      <div className="page-header">SPICA REALTIME UI</div>
+      <ul className="itemContainer card">
         {dummyTextandEmojis.map((item) => (
-          <li key={item._id}>
+          <li className="card" key={item._id}>
             <p>{item.text}</p>
-            <div className={styles["emojiContainer"]}>
+            <div className="emojiContainer">
               <button
                 onClick={() => handleClick(item._id, "like")}
-                className={styles["emojiCount"]}
+                className="emojiCount"
               >
                 <span>👍</span>
                 <span>{item.like}</span>
               </button>
               <button
                 onClick={() => handleClick(item._id, "dislike")}
-                className={styles["emojiCount"]}
+                className="emojiCount"
               >
                 <span>👎</span>
                 <span>{item.dislike}</span>
